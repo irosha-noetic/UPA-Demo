@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/dccPage.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Payment Options</title>
+    </head>
+    <body>
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Noetic Payments</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Secure Vault<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="customer.html">Create Customer</a></li>
+              <li><a href="card.html">Create Payment Method</a></li>
+              <li><a href="payExistingCustomer.html">Pay Existing Customer</a></li>
+            </ul>
+          </li>
+          <li><a href="checkout.html">Standerd Card Payment</a></li>
+          <li><a href="checkoutDcc.html">DCC Payment</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+            <div>
+                    <h1 class='topic'>Please choose a Payment Currency</h1>
+
+                    <div id='Option Buttons' style="text-align:center"> <!..This is Option 1 button..>
+                        <button id="dccOption" class="optionButtons">
+                           <p class='Currency' id = "cardHolderAmount"></p><p class='Currency' id ="cardHolderCurrency"></p>
+                            <p>&pound;1=&euro;1.6624</p>
+                        </button></a>
+                        
+                        
+
+                        <button id="nonDccOption" class="optionButtons"> <!..This is Option 2 button..>
+                            <p class="Currency" id = "merchantAmount"></p><p class='Currency' id ="merchantCurrency"></p>
+                            <p>&euro;1=&pound;0.8600</p>
+                        </button><br/><br/>
+    
+                        <button type="button" class="Paybutton" id = "payNow">Pay Now</button>
+
+                    
+
+                    <div id="myModal" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Verify 3d Secure Payment</p>
+
+
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            
+                            <button type="button" class="btn btn-success" id="submitForm">Pay</button>  
+                                    
+                        </div>
+                       
+                      </div>
+
+                    </div>
+
+
+
+                    
+                </div>
+            </div>
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script src="assets/js/dccPay.js"></script>
+    </body>
+</html>

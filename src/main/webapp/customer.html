@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Noetic Payments</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Noetic Payments</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Secure Vault<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="customer.html">Create Customer</a></li>
+          <li><a href="card.html">Create Payment Method</a></li>
+          <li><a href="payExistingCustomer.html">Pay Existing Customer</a></li>
+        </ul>
+      </li>
+      <li><a href="checkout.html">Standerd Card Payment</a></li>
+      <li><a href="checkoutDcc.html">DCC Payment</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+<h3>Add Customer</h3>
+
+  <form class="form-horizontal" method="post" action="#">
+<div class="row">
+        <div class="form-group">
+            <label for="name" class="cols-sm-6 control-label">Title</label>
+            <div class="cols-sm-6">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Enter your title" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Your First Name</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Enter your First Name" />
+                </div>
+            </div>
+        </div>
+      <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Your Sir Name</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="sirName" id="sirName" placeholder="Enter your Sir Name" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="cols-sm-2 control-label">Your Email</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username" class="cols-sm-2 control-label">Your Company</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="company" id="company" placeholder="Enter your company" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="cols-sm-2 control-label">Customer Reference</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="customerRef" id="customerRef" placeholder="Enter customer reference" />
+                </div>
+            </div>
+        </div>
+            <label for="password" class="cols-sm-2 control-label">Order Id</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="orderId" id="orderId" placeholder="Enter Order Id" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirm" class="cols-sm-2 control-label">Cutomer Type</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="customerType" id="customerType" placeholder="Enter Customer Type" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirm" class="cols-sm-2 control-label">Your Mobile No</label>
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="mobileNo" id="mobileNo" placeholder="Enter your Mobile no" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group ">
+            <button type="button" class="btn btn-primary btn-lg btn-block login-button" id="registerBtn">Register</button>
+        </div>
+    </form>
+  </div>
+  <script src="assets/js/customer.js"></script>
+</body>
+</html>
