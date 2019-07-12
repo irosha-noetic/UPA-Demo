@@ -13,7 +13,7 @@ $(function() {
     $("#register-Btn").click(function(e) {
 
         e.preventDefault();
-		const url = 'http://localhost:8080/upa-api/v1/upa/elavon/paymentMethod';
+		const url = 'https://dev-upa-api.wearenoetic.com/upa-api/v1/upa/elavon/paymentMethod';
 	
 		var data = {
 					"paymentProvider":"ELAVON_REALEX",
@@ -36,7 +36,7 @@ $(function() {
 			async:true,
 			dataType: "json",
 			contentType: "application/json",
-			headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGFlMWZlMjJhODAxODY0NjVhYmMwZjY5MzhlOGQ1YWM5OGU=","lang":"en", "X-Authorisation":"2FDD8051D3B620FACD224395FE8B866C50DB1EAB"},
+			headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGE4MTJlMjc2Mjk3NjM0MzBjOTU2YWJlMzc0MWFiYmNiMGU=","lang":"en", "X-Authorisation":"2FDD8051D3B620FACD224395FE8B866C50DB1EAB"},
 			
 			data: JSON.stringify(data),
 			

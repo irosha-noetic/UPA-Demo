@@ -62,7 +62,7 @@ $(function() {
 	var expYear = $("#exp-year").find(":selected").val();
 	var expDate = expMonth+expYear;
 
-	const url = 'http://localhost:8080/upa-api/v1/upa/elavon/currencyQuote';
+	const url = 'https://dev-upa-api.wearenoetic.com/upa-api/v1/upa/elavon/currencyQuote';
 	
 
         if(owner.val().length < 5){
@@ -101,7 +101,7 @@ $(function() {
 			dataType: "json",
 			contentType: "application/json",
 		
-			headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGFlMWZlMjJhODAxODY0NjVhYmMwZjY5MzhlOGQ1YWM5OGU=","lang":"en", "X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
+			headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGE4MTJlMjc2Mjk3NjM0MzBjOTU2YWJlMzc0MWFiYmNiMGU=","lang":"en", "X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
 			
 			data: JSON.stringify(data),
 			

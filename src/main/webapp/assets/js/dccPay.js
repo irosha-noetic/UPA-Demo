@@ -52,7 +52,7 @@ $(function() {
 
 	$("#submitForm").click(function(){
 
-		var pburl = "http://localhost:8080/upa-api/v1/upa/pb/termUrl"; 
+		var pburl = "https://dev-upa-api.wearenoetic.com/upa-api/v1/upa/pb/termUrl"; 
 		var PaRes = $('input[name=PaRes]').val();
 		var MD = $('input[name=MD]').val();
 
@@ -66,7 +66,7 @@ $(function() {
 					console.log(data);
 					alert("Payment Successful: "+data.payload.message);
 					modal.css("display","none");
-					window.location.replace("http://localhost:8085/UPA-Demo");
+					window.location.replace("http://localhost:8085/cardPayments");
 					//$('#myModal').find('.modal-body').html(data.payload);
 				
 
@@ -112,7 +112,7 @@ $(function() {
 
 function verify3dSecureEnrollment() {
 
-    const url = 'http://localhost:8080/upa-api/v1/upa/elavon/verifyEnrolled3dSecure';
+    const url = 'https://dev-upa-api.wearenoetic.com/upa-api/v1/upa/elavon/verifyEnrolled3dSecure';
 
     var data = {
 			    
@@ -139,7 +139,7 @@ function verify3dSecureEnrollment() {
 					async:true,
 					dataType: "json",
 					contentType: "application/json",
-					headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGFlMWZlMjJhODAxODY0NjVhYmMwZjY5MzhlOGQ1YWM5OGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
+					headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGE4MTJlMjc2Mjk3NjM0MzBjOTU2YWJlMzc0MWFiYmNiMGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
 					
 					data: JSON.stringify(data),
 					
@@ -159,7 +159,7 @@ function verify3dSecureEnrollment() {
 
 	$("#payNow").click(function(){
 
-		const url = 'http://localhost:8080/upa-api/v1/upa/elavon/acs';
+		const url = 'https://dev-upa-api.wearenoetic.com/upa-api/v1/upa/elavon/acs';
 
 		if(selectedPaymentOption == null || selectedPaymentOption == ""){
 	       		alert("Please select a payment option");
@@ -177,7 +177,7 @@ function verify3dSecureEnrollment() {
 									
 									    "acsUrl": data.payload.acsUrl,
 									    "pareq": data.payload.payerAuthReq,
-									    "termUrl":"http://172.17.0.6:8080/upa-api/v1/upa/pb/termUrl",
+									    "termUrl":"https://dev-upa-api.wearenoetic.com/upa-api/v1/upa/pb/termUrl",
 									    "merchantData":
 									    {
 										    "xAuthorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144",
@@ -215,7 +215,7 @@ function verify3dSecureEnrollment() {
 								async:true,
 								dataType: "json",
 								contentType: "application/json",
-								headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGFlMWZlMjJhODAxODY0NjVhYmMwZjY5MzhlOGQ1YWM5OGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
+								headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGE4MTJlMjc2Mjk3NjM0MzBjOTU2YWJlMzc0MWFiYmNiMGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
 								
 								data: JSON.stringify(data1),
 								
@@ -281,7 +281,7 @@ function verify3dSecureEnrollment() {
 								xhrFields: {
 									withCredentials: false
 								    },
-								    headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGFlMWZlMjJhODAxODY0NjVhYmMwZjY5MzhlOGQ1YWM5OGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
+								    headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGE4MTJlMjc2Mjk3NjM0MzBjOTU2YWJlMzc0MWFiYmNiMGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
 								
 								data: JSON.stringify(data),
 								
@@ -337,7 +337,7 @@ function verify3dSecureEnrollment() {
 							dataType: "json",
 							contentType: "application/json",
 
-							headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGFlMWZlMjJhODAxODY0NjVhYmMwZjY5MzhlOGQ1YWM5OGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
+							headers: {"Authorization": "Basic YXBpQG5vZXRpYzp1cGE4MTJlMjc2Mjk3NjM0MzBjOTU2YWJlMzc0MWFiYmNiMGU=","lang":"en","X-Authorisation":"DE3DABCC0457F2847BD722E92A483B2BFCFBF144"},
 							
 							data: JSON.stringify(data),
 							
