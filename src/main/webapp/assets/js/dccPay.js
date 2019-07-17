@@ -67,7 +67,6 @@ $(function() {
 					alert("Payment Successful: "+data.payload.message);
 					modal.css("display","none");
 					window.location.replace("http://localhost:8085/cardPayments");
-					//$('#myModal').find('.modal-body').html(data.payload);
 				
 
 				},

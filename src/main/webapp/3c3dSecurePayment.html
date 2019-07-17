@@ -4,14 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Credit Card Validation Demo</title>
+    <title>3D Secure Payment</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/demo.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="assets/css/3c3dSecurePopup.css">
+  	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	  <script> 
 		$(function(){
 		  $("#navbar").load("navbar.html"); 
@@ -20,23 +22,19 @@
 </head>
 
 <body>
-	<div id = "navbar"></div>
+
+<div id = "navbar"></div>
     <div class="container-fluid" style="background-color:#eee;">
         
         <div class="creditCardForm">
             <div class="heading">
-                <div class="alert alert-success" align = "center" role="alert">
-                              Payment Successful..!!
-                            </div>
-                            <div class="alert alert-danger" align = "center" role="alert">
-                              This is a danger alert—check it out!
-                            </div>
                 <h1>Confirm Purchase</h1>
             </div>
             <div class="payment">
                 <form>
 
-		              <div class="form-group orderId">
+
+ 		    <div class="form-group orderId">
                         <label for="orderId">Order Id</label>
                         <input type="text" class="form-control" id="order-Id">
                     </div>
@@ -44,6 +42,7 @@
                         <label for="amount">Amount</label>
                         <input type="number" min="0" class="form-control" id="payAmount">
                     </div>
+
                     <div class="form-group owner">
                         <label for="owner">Owner</label>
                         <input type="text" class="form-control" id="owner">
@@ -87,19 +86,27 @@
                         <img src="assets/images/amex.jpg" id="amex">
                     </div>
                     <div class="form-group" id="pay-now">
-                        <button type="submit" class="btn btn-default" id="confirm-purchase">Pay</button>
-
+                        <button type="submit" class="btn btn-default" id="confirm-purchase">Confirm</button>
                     </div>
-                    
                 </form>
             </div>
         </div>
 
     </div>
+    
+	<form name='Form1' method='post' action="https://web2payuat.3cint.com/ipage/service/_2006_05_v1_0_1/test/testacs.aspx">
+
+		<input type='hidden' id='PaReq' value="">
+		<input type='hidden' id='MD' value="">		
+		<input type='hidden' name='TermUrl' value="https://web2payuat.3cint.com/mxg/Service/_2009_11_v5_0_0/CompleteAuthorise3DS.aspx">
+
+	</form>
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.payform.min.js" charset="utf-8"></script>
-    <script src="assets/js/stdPayment.js"></script>
+    <script src="assets/js/3c3dSecPayment.js"></script>
 </body>
 
 </html>
